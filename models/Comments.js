@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class Comments extends Model { }
 
-User.init(
+Comments.init(
     {
       id: {
         type: DataTypes.INTEGER,
@@ -21,7 +21,7 @@ User.init(
         defaultValue: DataTypes.NOW,
       },
       post_id: {
-        type: DataTypes.INGETER,
+        type: DataTypes.INTEGER,
         reference: {
             model: 'post',
             key: 'id',
@@ -40,7 +40,7 @@ User.init(
       timestamps: false,
       freezeTableName: true,
       underscored: true,
-      modelName: 'user',
+      modelName: 'comments',
     }
   );
 
