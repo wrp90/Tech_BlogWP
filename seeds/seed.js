@@ -13,16 +13,6 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-//   const posts = await User.bulkCreate(postData, {
-//     individualHooks: true,
-//     returning: true,
-//   });
-
-//   const comments = await User.bulkCreate(commentData, {
-//     individualHooks: true,
-//     returning: true,
-//   });
-
   let posts = []; // array of post that we create
 
   for (const post of postData) {
