@@ -1,13 +1,19 @@
-{{#each post.comments}}
-    <div class="card mb-4">
-    <div class="row-md-5">
-        <div class="col-md-6">{{post.title}}</div>
-        <div class="col-md-6 ms-auto">
-        Posted by {{post.user.user_name}} on {{format_date post.date_posted}}
-        </div>
-        <p>{{post.content}}</p>
+<div class=" card mb-4">
+    <div class="row">
+      <div class="col-md-6">{{posts.title}}</div>
+      <div class="col-md-6 ms-auto">Posted by {{posts.user.user_name}} on {{posts.date_posted}}</div>
     </div>
-{{/each}}
+  <p>
+    {{posts.post_content}}
+  </p>
+</div>
+
+
+{{#if posts.comments}}
+  {{#each posts.comments}}
+  {{comment.content}}
+  {{/each}}
+{{/if}}
         
 
 
