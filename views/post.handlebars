@@ -1,4 +1,4 @@
-{{#if posts.comments}}
+{{#each post.comments}}
     <div class="card mb-4">
     <div class="row-md-5">
         <div class="col-md-6">{{post.title}}</div>
@@ -7,7 +7,7 @@
         </div>
         <p>{{post.content}}</p>
     </div>
-{{/if}}
+{{/each}}
         
 
 
