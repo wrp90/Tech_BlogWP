@@ -1,14 +1,14 @@
 <!-- Loop over each object in the projects array -->
-{{#each post as |post| }}
+{{#each user.posts as |post| }}
 <div class="card mb-4">
   <div class="row-md-5">
     <div class="col-md-6">{{post.title}}</div>
     <div class="col-md-6 ms-auto">
-      Posted by {{post.user.user_name}} on {{format_date post.date_posted}}
+      Posted by {{post.user.user_name}} on {{post.date_posted}}
     </div>
   </div>
     <p>
-      {{post.content}}
+      {{post.post_content}}
     </p>
 </div>
 {{/each}}
